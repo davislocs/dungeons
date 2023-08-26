@@ -15,7 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("/asets/bacground.jpg");
+  background-image: url("../../asets/bacground.jpg");
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
@@ -52,7 +52,7 @@ img {
 }
 
 .dungeon-background {
-  background-image: url("/asets/dungeon-baclground.jpg") !important;
+  background-image: url("../../asets/dungeon-baclground.jpg") !important;
   background-size: cover !important;
 }
 
