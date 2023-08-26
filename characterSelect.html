@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Character select</title>
+        <link rel="icon" href="asets/fav-icon.avif" type="image/png" sizes="32x32">
+        <link rel="stylesheet" href="dist/css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    </head>
+    <body>  
+        <main class="main-game">
+            <section id="enemy-zone" class="main-game__enemy-zone hidden">
+            </section>
+
+            <section id="character-select-zone" class="main-game__character-select-section">
+
+                <div id="character-card-worior" class="character-card hero" draggable="true">
+                    <h2 class="character-card__title">Worior</h2>
+                    <div class="hitt-or-miss"></div>
+                    <img class="character-card__image" src="asets/medieval warrio.png">
+                    <div class="character-card__stats">
+                        <ul class="stats-list">
+                            <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="worior-hp">100</span>/100</p></li>
+                            <li class="stats-list__item"><p>MA:</p><p class="ma" id="worior-ma">15</p></li>
+                            <li class="stats-list__item"><p>RA:</p><p class="ra" id="worior-ra">0</p></li>
+                        </ul>
+                    </div>
+                    <div class="character-card__attack-btn-zone hidden">
+                        <button class="fight-btn ma-attack-btn">Mele atck</button>
+                        <button class="fight-btn ra-attack-btn" >Range atck</button>
+                    </div>
+                </div>
+
+                <div id="character-card-wizard"  class="character-card hero" draggable="true">
+                    <h2 class="character-card__title">Wizard</h2>
+                    <div class="hitt-or-miss"></div>
+                    <img class="character-card__image" src="asets/medieval wizard.png">
+                    <div class="character-card__stats">
+                        <ul class="stats-list">
+                            <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="wizard-hp">50</span>/50</p></li>
+                            <li class="stats-list__item"><p class="stat-ma">MA:</p><p class="ma" id="wizard-ma">2</p></li>
+                            <li class="stats-list__item"><p class="stat-ra">RA:</p><p class="ra" id="wizrad-ra">17</p></li>
+                        </ul>
+                    </div>
+                    <div class="character-card__attack-btn-zone hidden">
+                        <button class="fight-btn ma-attack-btn">Mele atck</button>
+                        <button class="fight-btn ra-attack-btn">Range atck</button>
+                    </div>
+                </div>
+
+                <div id="character-card-archer" class="character-card hero" draggable="true">
+                    <h2 class="character-card__title">Archer</h2>
+                    <div class="hitt-or-miss"></div>
+                    <img class="character-card__image" src="asets/medieval archer.png">
+                    <div class="character-card__stats">
+                        <ul class="stats-list">
+                            <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="archer-hp">70</span>/70</p></li>
+                            <li class="stats-list__item"><p class="stat-ma">MA:</p><p class="ma" id="archer-ma">6</p></li>
+                            <li class="stats-list__item"><p class="stat-ra">RA:</p><p class="ra" id="archer-ra">12</p></li>
+                        </ul>
+                    </div>
+                    <div class="character-card__attack-btn-zone hidden">
+                        <button class="fight-btn ma-attack-btn">Mele atck</button>
+                        <button class="fight-btn ra-attack-btn">Range atck</button>
+                    </div>
+                </div>
+                            
+                <div id="character-card-barbarian" class="character-card hero " draggable="true">
+                    <h2 class="character-card__title">Barbarian</h2>
+                    <div class="hitt-or-miss"></div>
+                    <img class="character-card__image" src="asets/medieval barbar.png">
+                    <div class="character-card__stats">
+                        <ul class="stats-list">
+                            <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="barbarian-hp">80</span>/80</p></li>
+                            <li class="stats-list__item"><p class="stat-ma">MA:</p><p class="ma" id="barbarian-ma">9</p></li>
+                            <li class="stats-list__item"><p class="stat-ra">RA:</p><p class="ra" id="barbarian-ra">10</p></li>
+                        </ul>
+                    </div>
+                    <div class="character-card__attack-btn-zone hidden">
+                        <button class="fight-btn ma-attack-btn">Mele atck</button>
+                        <button class="fight-btn ra-attack-btn">Range atck</button>
+                    </div>
+                </div>
+
+                <div id="character-card-beast" class="character-card hero" draggable="true">
+                    <h2 class="character-card__title">Beast</h2>
+                    <div class="hitt-or-miss"></div>
+                    <img class="character-card__image" src="asets/medieval beast .png">
+                    <div class="character-card__stats">
+                        <ul class="stats-list">
+                            <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="beast-hp">120</span>/120</p></li>
+                            <li class="stats-list__item"><p>MA:</p><p class="ma" id="beast-ma">12</p></li>
+                            <li class="stats-list__item"><p>RA:</p><p class="ra" id="beast-ra">0</p></li>
+                        </ul>
+                    </div>
+                    <div class="character-card__attack-btn-zone hidden">
+                        <button class="fight-btn ma-attack-btn">Mele atck</button>
+                        <button class="fight-btn ra-attack-btn">Range atck</button>
+                    </div>
+                </div>
+            </section>
+
+            <button id="start-btn" class="main-game__start-btn">Go to dungeon!</button>
+            <div id="resultBox" class="gameResultBox hidden">
+                <p id="gameResult"></p>
+                <a href="index.html"><button id="play-again" class="play-again-btn">Play again!</button></a>
+            </div>
+            <button id="next-stage-btn" class="main-game__nexst-stage-btn hidden">Next stage!</button>
+
+            <section class="main-game__drop-zones-sections">
+                <div class="main-game__drop-zone"></div>
+                <div class="main-game__drop-zone"></div>
+                <div class="main-game__drop-zone"></div>
+            </section>
+            
+        </main>
+        
+        <section class="enemy-list hidden" id="enemy-list">
+
+            <div id="character-card-skeletor-worior" class="character-card enemy">
+                <div class="hitt-or-miss"></div>
+                <h2 class="character-card__title">Skeleton Worior</h2>
+                <img class="character-card__image" src="asets/skeletor-worrior.png">
+                <div class="character-card__stats">
+                    <ul class="stats-list">
+                        <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="skeletor-worior-hp">50</span>/50</p></li>
+                        <li class="stats-list__item"><p>MA:</p><p class="ma" id="skeletor-worior-ma">5</p></li>
+                        <li class="stats-list__item"><p>RA:</p><p class="ra" id="skeletor-worior-ra">0</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="character-card-skeletor-archer" class="character-card enemy">
+                <div class="hitt-or-miss"></div>
+                <h2 class="character-card__title">Skeleton Archer</h2>
+                <img class="character-card__image" src="asets/skeletor-archer.png">
+                <div class="character-card__stats">
+                    <ul class="stats-list">
+                        <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="skeletor-archer-hp">50</span>/50</p></li>
+                        <li class="stats-list__item"><p>MA:</p><p class="ma" id="skeletor-archer-ma">0</p></li>
+                        <li class="stats-list__item"><p>RA:</p><p class="ra" id="skeletor-archer-ra">5</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="character-card-necromancer" class="character-card enemy">
+                <div class="hitt-or-miss"></div>
+                <h2 class="character-card__title">Necrmncr</h2>
+                <img class="character-card__image" src="asets/nercromancer.png">
+                <div class="character-card__stats">
+                    <ul class="stats-list">
+                        <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="necromancer-hp">20</span>/20</p></li>
+                        <li class="stats-list__item"><p>MA:</p><p class="ma" id="necromancer-ma">0</p></li>
+                        <li class="stats-list__item"><p>RA:</p><p class="ra" id="necromancer-ra">7</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="character-card-dark-worrior" class="character-card enemy">
+                <div class="hitt-or-miss"></div>
+                <h2 class="character-card__title">Dark Knight</h2>
+                <img class="character-card__image" src="asets/evil-knight.png">
+                <div class="character-card__stats">
+                    <ul class="stats-list">
+                        <li class="stats-list__item"><p>HP:</p><p><span class="hp" id="dark-worrior-hp">50</span>/50</p></li>
+                        <li class="stats-list__item"><p>MA:</p><p class="ma" id="dark-worrior-ma">10</p></li>
+                        <li class="stats-list__item"><p>RA:</p><p class="ra" id="dark-worrior-ra">5</p></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section> 
+    </body>
+    <script src="main.js" type="text/javascript"></script>
+</html>
